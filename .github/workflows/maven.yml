@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-
+    
     runs-on: ubuntu-latest
 
     steps:
@@ -20,5 +20,7 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.11
-    - name: Build with Maven
-      run: mvn install -B -V -Psource-quality
+    - name: Maven install (skip test)
+      run: mvn install -DskipTests=true -B -V -Psource-quality
+    - name: Maven test
+      run: mvn verify -B
