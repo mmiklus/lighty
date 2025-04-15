@@ -17,6 +17,7 @@ import org.eclipse.jetty.server.HttpConnectionFactory;
 import org.eclipse.jetty.server.SecureRequestCustomizer;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.ServerConnector;
+import org.eclipse.jetty.server.ServerCompactor;
 
 public class Http2LightyServerBuilder extends LightyServerBuilder {
 
